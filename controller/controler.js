@@ -15,13 +15,16 @@ const getOneVogel = (req, res) => {
 const meestGespot = (req, res) => {
   let maxGespot = 0;
   const data = vogels.aantalKeerGespot.forEach((item) => {
-    if (item.aantalKeerGespot >= maxGespot) {
+    if (item >= maxGespot) {
       maxGespot = item.aantalKeerGespot;
     }
   });
+  console.log(data);
+  console.log(maxGespot);
   const data2 = vogels.find((item) => {
     item.aantalKeerGespot == maxGespot;
   });
+  console.log(data2);
   res.json({ status: "gelukt", data2 });
 };
 
