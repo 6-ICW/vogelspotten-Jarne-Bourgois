@@ -1,5 +1,5 @@
 const express = require("express");
-
+const ctrlspotten = require("../controller/controler");
 // maak router object aan
 const routes = express.Router();
 
