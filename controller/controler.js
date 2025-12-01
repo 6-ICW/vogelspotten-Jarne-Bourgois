@@ -1,11 +1,10 @@
 const vogels = require("../data/index");
 
 const getVogels = (req, res) => {
-  res.json(
-    vogels.map((items) => {
-      items.id, items.soort;
-    })
-  );
+  const data = vogels.map((items) => {
+    items.id, items.soort;
+  });
+  res.json({ status: "gelukt", data });
 };
 
 const getOneVogel = (req, res) => {
