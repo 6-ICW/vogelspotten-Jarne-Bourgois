@@ -7,6 +7,7 @@ const routes = express.Router();
 
 routes.get("/", ctrlspotten.getVogels);
 routes.get("/:ID", ctrlspotten.getOneVogel);
+// als je reeds een get /:ID hebt kan je niet nog eens /gespot hebben.
 routes.get("/gespot", ctrlspotten.meestGespot);
 routes.post("/", ctrlspotten.updateGespot);
 // routes.put("/", ctrlspotten.AddVogel); // {soort}
