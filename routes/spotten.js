@@ -7,8 +7,10 @@ const routes = express.Router();
 
 routes.get("/", ctrlspotten.getVogels);
 routes.get("/:ID", ctrlspotten.getOneVogel);
-routes.put("/", ctrlspotten.AddVogel); // {soort}
-routes.patch("/", ctrlspotten.vogelGespot); // {ID}
+routes.get("/gespot", ctrlspotten.meestGespot);
+routes.post("/", ctrlspotten.updateGespot);
+// routes.put("/", ctrlspotten.AddVogel); // {soort}
+// routes.patch("/", ctrlspotten.vogelGespot); // {ID}
 
 // exporteer het router object
 module.exports = routes;
